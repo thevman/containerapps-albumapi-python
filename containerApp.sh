@@ -19,7 +19,7 @@ az acr create \
   --sku Basic \
   --admin-enabled true
 
-az acr build --registry $ACR_NAME --image $API_NAME .
+az acr build --registry $ACR_NAME --image $API_NAME ./src
 
 az containerapp env create \
   --name $ENVIRONMENT \
